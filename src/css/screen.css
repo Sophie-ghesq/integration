@@ -1,0 +1,69 @@
+/*media screen +1200  = 4 rangée*/
+@media screen and (min-width: 1200px) {
+  .bloc {
+  }
+}
+/*media screen 900 à 1200 = 3 rangée*/
+@media screen and (min-width: 900px) and (max-width: 1200px) {
+	main {
+
+		grid-template-rows: repeat(8,80px);
+	}
+	#filtres{
+		grid-row: 1/9;  
+	}
+	.un, .quatre ,.sept{
+		grid-column: 1/3;
+	}
+	.deux ,.cinq, .huit{
+		grid-column: 3/5;
+	}
+	.trois ,.six{
+		grid-column: 5/7;
+	}
+
+}	
+/*media screen 650 à 900 = 2 rangée*/
+@media screen and (min-width: 650px) and (max-width: 900px) {
+  main {
+
+		grid-template-rows: repeat(10,80px);
+	}
+	#filtres{
+		grid-row: 1/11;  
+	}
+
+	.un, .trois ,.cinq,.sept{
+		grid-column: 1/4;
+	}
+	.deux ,.quatre,.six, .huit{
+		grid-column: 4/7;
+	}
+	
+}
+/*media screen -650 = 1 rangée */
+@media screen and (max-width: 650px) {
+	main {
+
+		grid-template-rows: repeat(20,80px);
+	}
+	.menu > li, .panier{
+	display: block;
+	margin:10px;
+}
+	#filtres{ 
+		display:none;
+	}
+
+	#shop{
+		grid-column: 1/7;
+	}
+	#titre{
+		grid-column: 1/7;
+	}
+
+	.un,.deux, .trois,.quatre ,.cinq,.six,.sept,.huit{
+		grid-column: 1/7;
+	}
+
+}
